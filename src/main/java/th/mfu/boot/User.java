@@ -2,14 +2,17 @@ package th.mfu.boot;
 
 import java.time.LocalDate;
 
+import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.GenerationType;
 
-
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String username;
@@ -46,7 +49,4 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    
-    
 }
